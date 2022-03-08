@@ -1,0 +1,232 @@
+
+
+#TIPOS PRIMITIVOS
+boolean -- sempre vou precisar de 2 sentenças para comparar
+
+           __ inteiro = byte | short | int | long | char
+numeros --
+		   __ ponto flutuante = float | double
+
+
+*char poderá ser um inteiro (ASCII)
+*numeros em java  funcionam como roletas, se somo +1 em um limite de um tipo ele "roda" a roleta e vai para o negativo.
+
+#LENDO DADOS DO TECLADO
+
+Scanner scan = new Scanner(System.in)
+
+System.out.println("Digite seu nome:");
+String nomeCompleto = scan.nextLine();
+System.out.println("Seu nome é " + nomeCompleto);
+
+#OPERADORES
+
+*Aritméticos +| - | / | * | %   ...
+*Relacionais == | != | > | < | >= | <=
+*Logicos && |  |  |^  | !
+
+#CONDICIONAIS
+*equalsIgnoreCase : ignora o fato de ser -m ou -M
+* a String é considerada uma classe em Java
+1.Uso o equalsIgnoreCase para comparar
+2. String.input = sacn.next(); para lê dados do teclado
+
+*SWITCH CASE 
+
+*aceita string na condição (java 7 acima)
+* posso usar o case vazio, que ele segue ate haver um default ou break
+ex: case 1 :
+    case 2 :
+
+-break 
+	Separa os blocos, se não coloco ele executa todos, até achar um break.
+-defalt
+	como se fosse um else, colocando ele nao e entrando um dado não valido, default entra com alguma mensagem.
+
+*IF ELSE	
+*Posso finalizar o bloco sem o else, so com else if.
+
+#LOOPS
+
+*WHILE
+++i : avalia primeiro o incremento depois a expressão.
+i++ : avalia a expressao depois o incremento.
+
+*FLAGS Posso usar as flags como : boolean variavel = "valor"; => aqui ja estou setando a variavel boolean
+
+* if(nome.equalsIgnoreCase(senha)){ //aqui eu estou dizendo q o nome nao será igual ignora o case sensitive
+     dadosCertos = true;
+
+     *sempre declarar as variaveis fora do escopo.
+
+#FOR EACH(JAVA 5)
+
+for(int nota: notas){                           for (int i=0; i<notas.lenght; i++);
+	System.out.println(nota);          =             int nota = notas[i];
+ 													System.out.println(nota);	
+}     
+###CLASSES
+
+Sempre começa com ela Maiúscula.
+
+	#####Descrição de um grupo de objetos
+	####Nome da classe
+
+	Conjunto de atributos = descrição
+
+	Conjunto de métodos = comportamento
+
+*RELACIONAMENTO ENTRE CLASSES
+
+ do tipo 1 - 1 	: ao inves de declarar um atributo do tipo simples, declara o tipo da classe
+ do tipo 1 - *  : utilizamos um array
+*sempre bom verificar se antes a referencia a esse objeto(array ou classe) é diferente de null para ai sim fazer o acesso as informaçoes
+*CLASSE ABSTRATA = quando colocamos abstrat indicamos q esse classe nao pode ser instanciada diretamente,so pode ser extendida para outras classes, a classe sendo abstrat só dizemos como a classe deve ser.
+caso coloque abstrat na assinatura do metodo, eu informo como as classes filhas devem se comportar ou seja ter o mesmo método.
+Apenas define, nao pode tornar realidade.    
+
+#ORIENTAÇÃO OBJETOS
+
+*****BASE / ESTRUTURA
+
+class Aluno{  
+  
+ //definindo variáveis   
+ int  id; //dados ou variável de instância ou variável global  
+ String nome; 
+  
+ // criando o método principal dentro da classe Aluno   
+ public static void  main(String args []) {    
+  
+  //Criando um objeto ou instância  
+  Aluno a1 = new  Aluno(); //criando um objeto de Aluno  
+  //Imprimindo valores do objeto   
+  System.out.println(a1.id); //acessando membro através da variável de referência  
+  System.out.println(a1.nome);  
+ }  
+}  
+
+***OBJETO:
+compostos por atributos e métodos definidos a partir de classes
+
+
+
+*METODO RECURSIVO
+-preciso definir um ponto de parada para esse metodo nao entrar no looping infinito.
+ vantagem do algoritmo recursivo é q são mais simples de entender,são mais utilizados em estruturas de dados.
+
+#VARIÁVEIS
+
+Sempre começa com letra minúscula ,depois camelCase.
+String sempre com aspas duplas.
+Valor de uma variavel inteira é iniciada com ZERO.
+
+*Usamos o 'this' dentro da classe. Assim, sempre que colocarmos 'this. ' antes de uma variável, fica implícito ao Java que estamos nos referindo aos atributos daquela Classe.
+
+*CONSTRUTORES (atributo recebendo valor do parametro)
+Lampada market = new Lampada();            =          lampada(string marca_,demais parametros){ (É O PARAMETRO DA CLASSE)
+        market.marca = "scott";							this.marca = marca_;} (É O ATRIBUTO DA CLASSE)
+        												Lampada market = new Lampada("scott",...); 
+-são basicamente funções de inicialização de uma classe
+-sempre que vc tiver um construtor com parametros sendo utilizado, é boa pratica fazer um construtor vazio logo em seguida.
+_______SOBRECARGA DE CONSTRUTORES_______ = É possivel declarar vários construtores para mesma classe.
+_______SOBRECARGA DE MÉTODOS_______ = É possivel declarar um segundo, ou terceiro método que tenham o mesmo nome, só um numero diferente de parametros
+_____ASSINATURA DO METODO :  tipo de parametro, nome do parametros etc.
+-PADRÕES JAVA : ATRIBUTOS => CONSTRUTORES => METODOS GET/SET => METODOS EXTRAS
+
+*PARAMETROS
+Qnd vou passar um parametro ao metodo?
+	- qnd eu precisar de uma informação que não está disponivel na classe, ou seja nao declarei ela nos atributos previamente
+
+Ex: classe = Cachorros
+
+ 		atributos da classe(carcterísticas) = peso, altura,temperamento,inteligencia...
+
+ 		métodos(comportamento, indicam ações,VERBOS) = latir,passear,dormir,brincar...
+
+**VOID só exibe um medoto
+**STATIC não precisa de uma instancia de uma classe, para poder utilizar um metodo, ou variavel.Será compartilhado com todas as instancias da classe.
+**FINAL imutavel nao se muda nada na variavel ou constante
+**CONSTANTE se´preuso em caixa alta e _ : CONST_EXEMPLO
+*Declarando objetos
+.
+.
+.
+market.tipo = new String[2]; //foi instanciado o array e sua quantidade e abaixo a posição e o q esta dentro do mesmo
+market.tipo[0]="led";
+.
+.
+.
+
+###HERANÇA
+	PERMITE REUTILIZAR A ESTRUTURA DO COMPORTAMENTO DE UMA CLASSE
+  *relacionamento 1 -1 .
+  -sempre que formos fazer menção a super classe uso o super,  e o  this faz menção a propria classe.
+
+-PUBLIC todos conseguem vê e acessar.
+-DEFAULT somente classses do proprio pacote que vao ter acesso ao metodo ou atributo.
+-PRIVATE somente dentro da propria classe se tem acesso, tem por herança conseguimos acessar. 
+-PROTECTED funciona como o default a diferença é que nao importa qual a classe ela esteja tbm tem acesso a esse atributo ou metodo
+-INTERFACE comop java nao pode extender de 2 classes ao mesmo tempo, eu transformo a segunda classe que quero extender em interface. e na classe filha coloco implements. EX:  
+public interface AnimalDomesticado (sempre os atrtibutos dentro da interface são: final e public SOMENTE)
+public class Cachorro extends Mamifero implements AnimalDomesticado, AnimalEstimacao
+SqlDCL | SqlDML| SqlDDL = se for interface posso extends todos
+
+###POLIMORFISMO(mais voltado para comportamento)
+	METODOS PODEM TER VARIAS FORMAS
+	HABILIDADE DE VARIÁVEIS TEREM "MAIS DE UM TIPO"
+	*Polimorfismo em tempo d execução, compilador irá saver de qual local chamar o metodo:
+	Pessoa pessoa = new Pessoa();
+
+        Pessoa aluno = new Aluno();
+
+        Pessoa professor = new Professor();
+
+        pessoa.setEndereco("ruas das flores,178");
+        aluno.setEndereco("ruas das amarelinhas,1789");
+        professor.setEndereco("ruas das acacias,18");
+
+        System.out.println(pessoa.obterEnderecoEtiqueta());
+        System.out.println(aluno.obterEnderecoEtiqueta());
+        System.out.println(professor.obterEnderecoEtiqueta());
+
+
+
+###ENCAPSULAMENTO (NÃO EXPOEM DIRETAMENTE OS ATRIBUTOS PARA MANIPULAÇÃO)
+	encapsular atributos é colocar get e set nos mesmos
+	get e set para obter e setar valores de classes onde os atributos estão private
+	metodo boolean GET fica IS, SET  continua da mesma forma.
+	SET N TEM NENHUM VALOR POR ISSO É VOID 
+	*SETA TODOS OS ATRIBUTOS COMO PRIVATE E GRIA OS METODOS GET E SET PARA CADA ATRIBUTO, E NA HORA DE USAR USA-SE OS METODO GET E SET
+
+*CONVERSÃO DE OBJETOS(casting)   
+-converter uma subclasse para o tipo sperclasse 
+   upcasting = uma classe menor em uma classe maior,conversao automatica, mas pode ser feito manual.
+   EX:   Aluno aluno = new Aluno();
+   		Pessoa pessoaAluno = aluno;
+
+   	EX:    			conversão em JAVA
+
+   						^
+   						|					
+   	Pessoa aluno2 = (Pessoa)new Aluno();
+
+# ERRO   X   EXCEÇÃO
+ERRO: termina a execução, nao consegue-se tratar esse erro.
+EXCEÇÃO:
+1.NÃO VERIFICADAS : Acontecem em tempo de execução do programa,runtime exception, NAO TEM COMO O COMPILADOR SABER Q VAI DAR ERRO. NullPointerException da erro qnd vc tenta chamar um metodo de um objeto q ainda nao foi instanciada
+
+2.VERIFICADAS :
+IOEXCEPTION leitura e escrita de arquivo
+sqlException: acesso ao BD
+
+#PACOTES(ORGANIZAR AS CLASSES)
+sempre em letras minúsculas.
+
+	DOMINIO           +     PROJETO     +                PASTA  
+
+empresa(com.sotech)   +   aprendizado   +  aulas(pode ser um nome para se organizar)
+ 	
+  
+
+#COMPARAÇÃO ENTRE CLASSE USAMOS O METODO EQUALS

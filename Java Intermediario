@@ -1,0 +1,59 @@
+# ENUMARADORES
+
+*são um tipo de constante.
+*NÃO se utiliza MODIFICADORES DE ACESSO nos CONSTRUTORES dos ENUNS, USA SOMENTE O CONSTRUTOR limpo e seco.
+* NÃO TEM HERANÇA EM ENUM, mas posso utilizar as interfaces
+EX:
+
+Construtor(){
+	
+}
+
+*MODIFICADORES DE ACESSO:
+public; 
+default;
+private;
+public;
+protected;
+default;
+
+
+# DIFERENÇA ENTRE ENUM CLASSE E ENEUM DENTRO DA CLASSE
+
+
+*****DENTRO DE UMA CLASSE(geralemnte aqui nao vou reutilizar em outras partes do codigo, por isso declaro o enum dessa forma dentro de uma classe)
+enum Genero {
+		FEMELE('F'),
+		MASC('M');
+		
+		private char valor;
+		Genero(char valor){
+			this.valor=valor;
+		}
+	}
+
+
+***** ENUM CLASSE(aqui o fiz uma classe enum onde provavelmente irei reutilizar esse codigo em outro lugar)
+public enum ClasseConstrutorEnum {
+
+	DOMINGO(1),SEGUNDA(2),TERCA(3),QUARTA(4),QUINTA(5),SEXTA(6),SABADO(7);
+
+	private int valor;
+	
+	//não uso modificadores de acesso no construtor do enum
+	ClasseConstrutorEnum(int valor){
+		this.valor = valor;
+	}
+	
+	public int getValor() {
+		return this.valor;
+	}
+}
+
+*METODO VALUES DO ENUM
+
+Todo enum que criarmos, o values retorna um array com os todos os valores
+
+#VALUEOF
+
+*quando usamos o enum.valueof ele retorna um proprio enumerador

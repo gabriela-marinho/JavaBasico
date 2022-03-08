@@ -1,0 +1,33 @@
+# ATALHOS ECLIPSE
+
+#### DEBUG SEMPRE ONDE ESTÁ O MÉTODO MAIN ####
+
+###APAGAR UMA LINHA
+
+ * Cursor em cima da linha : CTRL +  D
+
+###AUTOCOMPLET
+
+ *CTRL + ESPAÇO
+
+ ###IDENTAÇÃO
+
+ * Seleciona tudo => CTRL + I
+
+ ###LEVAR AO METODO SELECIONADO
+
+ * Clica em cima do metodo  + F3
+
+### ACHO O NOME DESEJADO
+
+ *CTRL e clicar em cima da palavra ,leva para onde já existe a mesma
+
+ ### ABRE ABA PARA CRIAR (CONSTRUTPRES,GETTERS/SETTERS...)
+
+ * CTRL + 3
+
+ ### SALVA TUDO
+ * CTRL + SHIF + S
+
+ ### SALVA SÓ UMA ABA
+ * CTRL + S

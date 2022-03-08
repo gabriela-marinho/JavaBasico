@@ -1,0 +1,69 @@
+# VETOR
+*Como String é um objeto não podemos usar o == no java
+*FORMA:
+
+*****construção do vetor
+		private String[]elementos;
+
+*****construtor para inicializar o vetor, com  capacidade de elementos que eu quero criar
+public Vetor(int capacidade) {
+			this.elementos = new String[capacidade];
+			this.tamanho=0;
+
+***** STRINGBUILDER
+quando concatena strings com StringBuilder é invocado o método append. Esse método aloca novas strings concatenadas para o mesmo objeto, ou seja, cada vez que concatena strings não são criadas cópias dos objetos como é realizado pelo método concat da classe String, contribuindo para um melhor desempenho do sistema.
+
+***PADROES***
+-vetor com string : inicia com NULL.
+-vetor com boolean : inicia com false.
+-vetor com int(ou qlq tipo primitivo com numeros) : inicia com 0.
+
+***** GENERATE ToString
+- se eu NÃO faço esse metodo, imprimi somente o espaço alocado em memoria
+
+***** GENERICS
+<> = Diamond
+EX(construtor):
+public Lista(int capacidade, Class<T> tipoClasse) {
+				this.elementos = (T[ ]) Array.newInstance(tipoClasse, capacidade); // (T[]) new Object[capacidade];  => solução do Livro Java Efetivo.
+				this.tamanho=0;
+			}
+
+***** Classe Object
+
+*****ARRAY LIST
+
+CRESCE A MEDIDA QUE FOR NECESSARIO:
+
+		ArrayList<String> arrayList = new ArrayList<String>();
+
+
+
+***** PILHA / STACKS
+*primeiro q entra é o ultimo q saí  = > LIFO (last in first out)
+
+base da pilha =  inicio
+
+topo da pilha = ultimo
+
+
+
+***** 
+nome da minha classe              tamanho do vetor
+		|							   |
+
+		|							   |
+Pilha<Livro> pilha = new Pilha<Livro>(20);
+
+
+***** CLASSE STACK
+ -não precisa determinar tamanho,pois pode ter qnts elementos sejam necessarios.
+ -pilha dinamica
+
+
+*****FILA / QUEUES
+*primeiro que entra é o primeiro que saí = > FIFO (first in first out)
+
+
+*VARIAVEIS LOCAIS: dentro de uma classe.
+*VARIAVEIS LOCAIS : dentro de um metodo, devem ser inicializadas antes de usadas.
