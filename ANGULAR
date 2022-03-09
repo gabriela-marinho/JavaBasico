@@ -1,0 +1,15 @@
+#ANGULAR 2
+
+www.angular.io
+
+1.COMPONETE => praticamnete é a view (oq o cliente vê)
+		{}
+            ENCAPSULA:
+            -Template
+            -Metadata: processamento de classes, permite lê as classes e processar as mesmas
+            -Dado a ser mostrado na tela(Data Binding => Associação dos datos que temos no nosso componente com os compenente HTML do  templente
+            -Comportamento da VIEW
+
+
+   *tudo é um componente  , principal papel é mostrar dados, se comunica com o backend.
+   *NÃO SE ESCREVE CODIGO DE LOGICA NO COMPONENTE, SE ESCREVE NO *****SERVICE*****      
