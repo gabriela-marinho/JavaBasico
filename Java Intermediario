@@ -57,3 +57,112 @@ Todo enum que criarmos, o values retorna um array com os todos os valores
 #VALUEOF
 
 *quando usamos o enum.valueof ele retorna um proprio enumerador
+
+# WRAPPERS
+
+        PONTO FLUTUANTE  ->     Float    =   float   SUPER CLASS NUMBER
+								Double   =   double  SUPER CLASS NUMBER
+
+		INTEGRAL         -> 	Byte     =  byte     SUPER CLASS NUMBER
+								Short    =	short    SUPER CLASS NUMBER
+								Integer  =  int      SUPER CLASS NUMBER
+								Long     =  long     SUPER CLASS NUMBER
+
+
+
+		LOGICO   		-> 		Boolean  =  boolean  SUPER CLASS OBJECT
+		CARACTER 		-> 		Character=  char     SUPER CLASS OBJECT
+
+*Static import
+
+é importante para economizar ao chamar uma classe só utilizo o metodo, nao preciso colocar o nome da classe antes.
+EX.:  math.sqrt(2)  =   sqrt(2)
+import static java.lang.Math.pow; => importo so a classe pow ou qlq outra (é mais elegante)
+
+import static java.lang.Math.*;	 => aqui importo todas as classes
+
+*TIPOS PRIMITIVOS: passagem por valor.
+*TIPOS CLASSE,ENUM,ARRAY: passagem por referencia.
+
+#CLASSES ANINHADAS
+
+*Classes Internas
+- tem acesso aos atributos das classes externas (Externa.this.texto)
+- para instanciar a classe interna, primeira preciso da instancia da classe externa(externa.new interna())
+
+*Classes Local
+- classe declarada dentro de um metodo onde o escopo somente dentro do metodo
+
+*Classe Anomina
+- instancio a classe e mudo seu comportamento quando estamos instanciando
+
+# GARBAGE COLLECTOR
+
+*Otimiza a memoria excluindo  objetos da memoria heap que nao estão mais sendo referenciados.
+
+final int MB 1024 * 1024;
+Runtime runtime = Runtime.getRuntime(); //singleton
+runtime.totalMemory() - runtime.freeMemory();
+#THREADS
+-menor unidade de codigo q pode ser executada.
+
+
+
+-Tornam programas mais eficientes.
+
+*Criando um Thread:
+
+		- extendendo a classe Thread
+					OU
+		- Implementando	uma interface.
+
+1.START : inicia o metodo run
+2. RUN	: executa a tarefa dsa thread
+3. sleep : 	coloca a thread para dormir por X miliseconds
+
+metodo join espera a execução anterior acabar para ser enviado a proxima.
+
+*PRIORIDADES EM THREADS
+-A ORDEM DAS THREADS GERALMENTE FICAM IGUAIS SE NAO COLOCO A PROIORIDADE DAS MESMAS COM 
+NOME.SETPRIORITY().
+
+*SINCRONIZAÇÃO
+
+
+*REVEZAMENTO
+
+-Wait  : bloqueia a thread temporariamente, mode de espera ate que seja notificada. precisa do try
+
+-notify : notifica uma thread que estava esperando, retorna a execução da thread.
+
+-notifyAll : notifica todas as thredas e a que tem prioridade mais alta ganha acesso.
+
+* REMOVIDOS DO JAVA
+-Stop termina a execução
+-Resume resume a execução
+-Suspend pausa a execução
+
+
+*DEADLOCKS
+-UM BLOQUEIA O RECURSO DO OUTRO
+-para evitar o deadlock : usamos o wait e notify
+
+*strings são imutaveis, 
+
+# JARS
+Empacotamento de uma biblioteca do java
+*hibernate, jpa, framework etc..
+]
+- posso exportar um jar ou um jar executavel
+*/*/*/ em mvnrepository : consigo visualizar qndts bibliotecas foram publicadas por ano
+
+1º vou no site da biblioteca(lib) que quero instalar, 
+2º copio para maquina qual lib desejo
+3º no diretorio geral do projeto crio uma folder chamada lib(é onde ficam todas as jars do prejeto[bibliotecas])
+4º colo o jar que eu baixei na maquina dentro da folder lib
+5º clico com o botão direito na jar que eu acabei de colar -> buildpath -> add to build path
+6º apos isso podemos vê uma pasta referenced libraries (biblioteca refenciadas), só apos isso ser feito que consigo utilizar
+7º
+
+
+
